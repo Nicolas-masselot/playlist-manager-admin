@@ -1,0 +1,52 @@
+
+<div [ngClass]="containerClass" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><fa-icon [icon]="faFacebook"></fa-icon></a>
+				<a href="#" class="social"><fa-icon [icon]="faGoogle"></fa-icon></a>
+				<a href="#" class="social"><fa-icon [icon]="faApple"></fa-icon></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input class="input" #mail type="email" placeholder="Email" />
+			<input class="input" #pass type="password" placeholder="Password" />
+			<input class="input" #confirm type="password" placeholder="Confirmed password" />
+			<select class="form-select input" (change)="selectRole($event)">
+                <option selected>Select role</option>
+                <option value="false" >User</option>
+                <option value="true">Advertiser</option>
+			</select>
+			<button style="margin-top: 1rem;" (click)="signUp(mail.value,pass.value,confirm.value)">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><fa-icon [icon]="faFacebook"></fa-icon></a>
+				<a href="#" class="social"><fa-icon [icon]="faGoogle"></fa-icon></a>
+				<a href="#" class="social"><fa-icon [icon]="faApple"></fa-icon></a>
+			</div>
+			<span>or use your account</span>
+			<input class="input" #email type="email" placeholder="Email" />
+			<input class="input" #password type="password" placeholder="Password" />
+			<a [routerLink]="['/forget-password']" routerLinkActive="active">Forgot your password?</a>
+			<button (click)="signIn(email.value,password.value)">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>Welcome Back!</h1>
+			<p>To keep connected with us please login with your personal info</p>
+			<button class="ghost" id="signIn" (click)="toggleRightPanel(false)">Sign In</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<h1>Hello, Friend!</h1>
+			<p>Enter your personal details and start journey with us</p>
+			<button class="ghost" id="signUp" (click)="toggleRightPanel(true)">Sign Up</button>
+		</div>
+		</div>
+	</div>
+</div>

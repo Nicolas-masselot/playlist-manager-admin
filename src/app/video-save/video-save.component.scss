@@ -1,0 +1,55 @@
+.required::after {
+    content: "*";
+    color: #dd6666;
+    margin-left: 0.25rem;
+}
+.modify-block{
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cancel{
+    margin-top: 1rem;
+    background: #383838;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.modify{
+    margin-top: 1rem;
+    background: #8699DA;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.col{
+    margin-bottom: 1rem;
+}
+
+.modal-header{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.12em;
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.12em;
+        flex-grow: 4;
+    }
+}
+
+.modal-title{
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.12em;
+}

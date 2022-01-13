@@ -1,0 +1,54 @@
+#dialogMessage{
+    width: 674px;
+    height: 76px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+
+    color: black;
+}
+
+mat-dialog-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#deleteButton{
+    width: 447px;
+    height: 52px;
+    background: #FF0000;
+    box-shadow: 4px 8px 12px rgba(78, 99, 141, 0.06), inset 0px 4px 12px rgba(200, 211, 249, 0.6);
+    border-radius: 80px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+#cancelButton{
+    
+    width: 447px;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(200, 211, 249, 0.6), 4px 8px 12px rgba(78, 99, 141, 0.06);
+    border-radius: 80px;
+    border-color: white;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+
+    color: #8699DA;
+}

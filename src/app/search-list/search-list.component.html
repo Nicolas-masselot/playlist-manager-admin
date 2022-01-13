@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="" style="margin-bottom: 1rem; " *ngFor="let video of pageOfItems" (click)="watchVideo(video)">
+    <div style="display: flex;">
+      <div class="image">
+          <img [src]="video.thumbnail" style="height: 202px;width: 340px;">
+      </div>
+      <div class="content" style="margin-left: 1rem;">
+          <h3 class="header" style="margin: 1em 0 1em 0;">{{ video.title }}</h3>
+          <div class="meta" style="display: flex;">
+            <span class="date" style="font-weight: bolder;" >
+              <a [href]="video.channelUrl" target="_blank">{{ video.channelTitle }}</a>
+              -
+            </span>
+            <span class="ui right floated date" style="font-weight: bolder; margin-left: 5px;">{{ video.publishedAt | date:'mediumDate' }}</span>
+          </div>
+          <div class="description">
+            {{ video.description?.slice(0,100) }}...
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="card-footer pb-0 pt-3">
+    <jw-pagination [pageSize]="10" [items]="videos" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</div>
+
+   

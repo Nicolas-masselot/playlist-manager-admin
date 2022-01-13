@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div style="margin: 1rem 2rem; display: flex; justify-content: space-between">
+  <div id="Allplaylists">History</div>
+  <div>
+    <button type="button" class="btn btn-outline-danger" (click)="clearHistory()">Clear history</button>
+  </div>
+</div>
+<div class="ui four column grid" style="margin-left: 1rem;">
+    <div class="column" *ngFor="let video of videoList" (click)="watchVideo(video)" >
+      <div class="ui card" style="cursor:pointer;">
+        <div class="image">
+          <img [src]="video.thumbnail">
+        </div>
+        <div class="content">
+          <a class="header" style="margin: 1em 0 1em 0;">{{ video.title }}</a>
+          <div class="meta">
+            <span class="date" style="font-weight: bolder;">
+              <div>{{ video.channelTitle }}</div>
+            </span>
+            <span class="ui right floated date" style="font-weight: bolder;">{{ video.publishedAt | date:'mediumDate' }}</span>
+          </div>
+          <div class="description">
+            {{ video.description?.slice(0,50) }}...
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>

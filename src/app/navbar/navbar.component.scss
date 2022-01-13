@@ -1,0 +1,47 @@
+*{
+    font-size: medium;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.youtube {
+    display: flex;
+    align-items: center;
+    color: rgba(117, 117, 117, 1);
+    padding: 0 10px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(238, 238, 238, 1);
+    box-shadow: 5px 10px 20px -20px rgba(85, 172, 238, 1);
+}
+
+/* Youtube Navbar */
+
+.youtube {
+    background-color: #fff;
+}
+
+.youtube li {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.youtube .fa-youtube {
+    color: red;
+}
+
+.youtube .youtube-search {
+    margin: auto;
+}
+
+.youtube-search input {
+    margin-top: 0.25rem;
+    width: 500px;
+}
+
+.youtube-search .input-group-append{
+    margin-top: 0.25rem;
+}

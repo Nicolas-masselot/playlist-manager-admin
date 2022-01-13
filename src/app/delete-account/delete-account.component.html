@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div id="delAccountContent">
+    <div id="options">
+        <h3> Settings</h3>
+
+        <p [routerLink]="['/userSettings']" class="linksOptions">Change password</p>
+        <p [routerLink]="['/deleteAccount']" class="linksOptions">Delete account </p>
+    </div>
+    <div id="separationbar"></div>
+    <div id="deleteButton">
+        <p>Once you delete your account, there is no going back. 
+            Please be certain. </p>
+
+        <button id="delButton" (click)="deleteAccount()" >Delete your account</button>
+    </div>
+
+</div>

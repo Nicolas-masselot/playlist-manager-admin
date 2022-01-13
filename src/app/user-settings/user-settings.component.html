@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div id="ChangePasswordContent">
+    <div id="options">
+        <h3> Settings</h3>
+
+        <p [routerLink]="['/userSettings']" class="linksOptions">Change password</p>
+        <p [routerLink]="['/deleteAccount']" class="linksOptions">Delete account </p>
+    </div>
+
+    <div id="separationbar"></div>
+
+    <div id="currentCancel">
+        <div id="currentpassfield">
+            <label>Current password</label>
+            <div class="settingInputs">
+                <input *ngIf="showCurrent" id="passwordCourant" type="text" [(ngModel)]="currentPassword" />
+                <input *ngIf="!showCurrent" id="passwordCourant" type="password" [(ngModel)]="currentPassword" />
+                <fa-icon (click)="showPasswords(1)" *ngIf="showCurrent" [icon]="faEye"></fa-icon>
+                <fa-icon (click)="showPasswords(1)" *ngIf="!showCurrent" [icon]="faEyeSlash"></fa-icon>
+            </div>
+        </div>
+        
+
+        <button id="cancelButton" [routerLink]="['/dashboardUser']">Cancel</button>
+    </div>
+        
+    <div id="newPassSave">
+        <div id="newpassfield">
+            <label>New password</label>
+            <div class="settingInputs">
+                <input *ngIf="showNewPass"  id="NouvPassword" type="text" [(ngModel)]="newPassword"/>
+                <input *ngIf="!showNewPass" id="NouvPassword" type="password" [(ngModel)]="newPassword"/>
+                <fa-icon (click)="showPasswords(2)" *ngIf="showNewPass" [icon]="faEye"></fa-icon>
+                <fa-icon (click)="showPasswords(2)" *ngIf="!showNewPass" [icon]="faEyeSlash"></fa-icon>
+            </div>
+        </div>
+        
+        <div id="newpassconfirm">
+            <label>Confirm new password </label>
+            <div class="settingInputs">
+                <input *ngIf="showNewConfirm"  id="NouvConfirm" type="text" [(ngModel)]="newConfirm"/>
+                <input *ngIf="!showNewConfirm" id="NouvConfirm" type="password" [(ngModel)]="newConfirm"/>
+                <fa-icon (click)="showPasswords(3)" *ngIf="showNewConfirm" [icon]="faEye"></fa-icon>
+                <fa-icon (click)="showPasswords(3)" *ngIf="!showNewConfirm" [icon]="faEyeSlash"></fa-icon>
+            </div>
+        </div>
+        
+        <button id="saveButton" (click)="updatePassword()" >Save change</button>
+    </div>
+    
+</div>

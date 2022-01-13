@@ -1,0 +1,24 @@
+#Allplaylists {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #191414;
+}
+
+#playlistsList{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.cardPlaylist{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.playlistsList:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

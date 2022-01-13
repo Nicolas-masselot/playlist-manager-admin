@@ -1,0 +1,13 @@
+<mat-dialog-content>
+    <h3> Save in </h3>
+    <mat-form-field appearance="fill">
+        <mat-label>Playlist</mat-label>
+        <mat-select [formControl]="playlistList" multiple>
+          <mat-option *ngFor="let playlist of AllPlaylists" [value]="playlist.playlistId">{{playlist.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button class="cancel" mat-button mat-dialog-close>Cancel</button>
+<button class="modify" mat-button (click)="addToPlaylist()">Save</button>
+</mat-dialog-actions>

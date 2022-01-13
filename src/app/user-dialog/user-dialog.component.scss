@@ -1,0 +1,144 @@
+mat-dialog-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#Userform{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#newPassSave{
+    display: flex;
+    flex-direction: column;
+}
+
+#saveButton, #resetpass{
+    width: 447px;
+    height: 52px;
+    background: #789ADE;
+    box-shadow: 4px 8px 12px rgba(78, 99, 141, 0.06), inset 0px 4px 12px rgba(200, 211, 249, 0.6);
+    border-radius: 80px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+#cancelButton{
+    
+    width: 447px;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(200, 211, 249, 0.6), 4px 8px 12px rgba(78, 99, 141, 0.06);
+    border-radius: 80px;
+    border-color: white;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+
+    color: #8699DA;
+}
+
+.settingInputs{
+    display: flex;
+    align-items: center;
+    /* white */
+
+    background: #FFFFFF;
+    /* dark blue /1 8 */
+
+    border: 2px solid #789ADE;
+    box-sizing: border-box;
+    border-radius: 80px;
+
+    width: 447px;
+    height: 52px;
+    padding: 0px 32px;
+}
+
+.settingInputsError{
+    display: flex;
+    align-items: center;
+    /* white */
+
+    background: #FFFFFF;
+    /* dark blue /1 8 */
+
+    border: 2px solid red;
+    box-sizing: border-box;
+    border-radius: 80px;
+
+    width: 447px;
+    height: 52px;
+    padding: 0px 32px;
+}
+
+.ErrorMessage{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+
+    /* black/2 5 */
+
+    color: red;
+}
+
+input {
+    border-style: none;
+    width: 93%;
+    outline: none;
+}
+
+fa-icon{
+    width: 32px;
+    height: 25px;
+    color: #789ADE;
+    margin-left: 50%;
+}
+
+label , mat-label{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+
+    /* black/2 5 */
+
+    color: #444B59;
+}
+
+::ng-deep .mat-select-arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 13px solid;
+    margin: 0 4px;
+    color: #789ADE;
+}
+
+h3{
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 55px;
+}

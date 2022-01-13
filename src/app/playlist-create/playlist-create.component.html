@@ -1,0 +1,44 @@
+<div class="modal-header">
+    <div class="title">
+        <h2 class="modal-title" >Create playlist</h2>
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body d-flex flex-column ">
+    <div class="info-modify">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="playlistName" class="form-label required">Title</label>
+                    <input type="text" class="form-control" id="playlistName" [(ngModel)] = "this.playlistName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="playlistDescription" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="playlistDescription" [(ngModel)] = "this.playlistDescription">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label required">Visible</label>
+                    <select class="form-select input" (change)="selectVisibility($event)">
+                        <option selected value="PUBLIC">Public</option>
+                        <option value="PRIVATE" >Private</option>
+                        <option value="UNLISTED">Unlisted</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 d-flex flex-row modify-block" style="justify-content: space-between;">
+        <button class="cancel" (click) = "activeModal.dismiss('Cross click')">
+            Cancel
+        </button>
+        <button class="modify" (click) = "addPlaylist()" >
+            Create
+        </button>
+    </div>
+</div>

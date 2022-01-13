@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div style="display: flex;">
+    <div style="margin-left: 2rem; display: flex;flex-direction: column;">
+        <youtube-player 
+            videoId={{this.videoId}}
+            suggestedQuality="highres" 
+            [height]="531" 
+            [width]="944"         
+        >
+        </youtube-player>
+        <div>
+            <div style="text-align: left; margin-top: 1rem;">
+                <button type="button" class="btn btn-outline-dark" (click)="saveVideo()">Add to playlist</button>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 2rem;">
+        <img [src]="this.adsImg" alt="ads" style="width: 400px; border: 1px solid;">
+    </div>
+</div>

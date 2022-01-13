@@ -1,0 +1,47 @@
+<mat-dialog-content>
+    <h3> {{ titleMessage }} </h3>
+    <div id="Userform">
+        <label>Email :</label>
+        <div class="{{emailFieldClass}}">
+            <input type="text" name="email" id="mailUser" [(ngModel)]="email"/>
+        </div>
+        <p class="ErrorMessage" *ngIf="emailInvalid">please enter a valid email address</p>
+        <div id="newpassfield" *ngIf="dialogType === 'addUser'">
+            <label>Password :</label>
+            <div class="{{PasswordFieldClass}}">
+                <input *ngIf="showNewPass"  id="NouvPassword" type="text" [(ngModel)]="mdp"/>
+                <input *ngIf="!showNewPass" id="NouvPassword" type="password" [(ngModel)]="mdp"/>
+                <fa-icon (click)="showPasswords(1)" *ngIf="showNewPass" [icon]="faEye"></fa-icon>
+                <fa-icon (click)="showPasswords(1)" *ngIf="!showNewPass" [icon]="faEyeSlash"></fa-icon>
+            </div>
+        </div>
+        <p class="ErrorMessage" *ngIf="passwordRequired">please enter a password</p>
+        
+        <div id="newpassconfirm" *ngIf="dialogType === 'addUser'">
+            <label>Confirm password : </label>
+            <div class="{{ConfirmFieldClass}}">
+                <input *ngIf="showNewConfirm"  id="NouvConfirm" type="text" [(ngModel)]="ConfirmPass"/>
+                <input *ngIf="!showNewConfirm" id="NouvConfirm" type="password" [(ngModel)]="ConfirmPass"/>
+                <fa-icon (click)="showPasswords(2)" *ngIf="showNewConfirm" [icon]="faEye"></fa-icon>
+                <fa-icon (click)="showPasswords(2)" *ngIf="!showNewConfirm" [icon]="faEyeSlash"></fa-icon>
+            </div>
+        </div>
+        <p class="ErrorMessage" *ngIf="passwordsMatchError">passwords should match</p>
+        <p class="ErrorMessage" *ngIf="confirmRequired ">please confirm the password</p>
+
+        <mat-label *ngIf="dialogType === 'addUser'">Select a role</mat-label>
+        <div class="{{RoleFieldClass}}" *ngIf="dialogType === 'addUser'">
+            <mat-select [(ngModel)]="role" >
+                <mat-option value="{{env.USER_ROLE}}">User</mat-option>
+                <mat-option value=" {{env.ADVERTISER_ROLE}} ">Advertiser</mat-option>
+            </mat-select>
+        </div>
+        <p class="ErrorMessage" *ngIf="roleRequired">please choose a role</p>
+        
+        <button id="resetpass" *ngIf="dialogType === 'editUser'" (click)="resetPass()" [disabled]="resetDisable">Reset password</button>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button id="saveButton" (click)="OnSaveData()"> {{ SavebuttonText }} </button>
+    <button id="cancelButton" mat-dialog-close>Cancel </button>
+</mat-dialog-actions>

@@ -1,0 +1,7 @@
+<mat-dialog-content>
+    <p id="dialogMessage">{{ message }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button id="deleteButton" (click)="onClickDelete()">{{ confirmButtonText }}</button>
+    <button id="cancelButton" mat-dialog-close>{{ cancelButtonText }} </button>
+</mat-dialog-actions>

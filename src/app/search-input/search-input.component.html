@@ -1,0 +1,10 @@
+<div class="youtube-search">
+    <div class="input-group mb-3 search-form">
+        <input type="text" id="search-city" class="form-control" placeholder="Search" [(ngModel)]="this.searchInput" (keyup.enter)="onSearch()">
+        <div class="input-group-append">
+            <button style="background:white"class="btn btn-outline-secondary" (click)="onSearch()">
+                <span class="fa fa-search form-control-feedback"></span>
+            </button>
+        </div>
+    </div>
+</div>

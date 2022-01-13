@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<h2>Manage Ads</h2>
+<div id="searchField">
+    <div>
+        <input name="searchAdverts" id="searchAdverts" placeholder="Name..." (keyup)="filtrerAds($event)">
+        <fa-icon [icon]="faSearch" class="searchIcon"></fa-icon>
+    </div>
+    <button id="addAds" (click)="OpenAddAdvert()" *ngIf="roleUser === env.ADVERTISER_ROLE">Add ads</button>
+</div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="datasource">
+        <ng-container matColumnDef="infosAd">
+            <td mat-cell *matCellDef="let ad">
+                <p class="AdvertInfo">{{ ad.fileName }}</p>
+                <p *ngIf="roleUser === env.ADMIN_ROLE" class="AdvertInfo">{{ ad.emailAdvertiser }}</p>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="options">
+            <td mat-cell *matCellDef="let ad">
+                <button id="editButton" mat-button (click)="openDialogAds(ad._id,1)" *ngIf="roleUser === env.ADVERTISER_ROLE" ><mat-icon id="editIcon">edit</mat-icon></button>
+                <button id="deleteButton" mat-button (click)="openDialogAds(ad._id,2)"><mat-icon id="deleteIcon">delete</mat-icon></button>
+            </td>
+        </ng-container>
+
+        <tr mat-row *matRowDef="let row; columns: colonnes;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons>
+        </mat-paginator>
+</div>

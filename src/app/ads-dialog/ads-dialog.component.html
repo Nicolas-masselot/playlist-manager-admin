@@ -1,0 +1,22 @@
+<mat-dialog-content>
+    <h3> {{ titleMessage }} </h3>
+
+    <p *ngIf="dialogType === 'editAds' && accountRole === env.ADMIN_ROLE" id="mailAd"> Advertisement from {{ advertiserMail }} </p>
+    <div id="AdvertForm">
+        <label>Advertisement file :</label>
+
+        <div class="{{fileInputClass}}">
+            <label for="advertFile" id="fileInputLabel">{{labelFileText}}</label>
+            <input id="advertFile" name="advertFile" type="file" (change)="onFileSelected($event)" />
+        </div>
+
+        <p *ngIf="FileSizeIncorrect" class="ErrorMessage">The size of your file is too big (>5 mb)</p>
+        <p *ngIf="FileTypeIncorrect" class="ErrorMessage">Please add a file of the following types : {{ FileTypes.toString() }} </p>
+        <p *ngIf="FileRequired" class="ErrorMessage">Please add a file for your advertisement</p>
+        
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button id="saveButton" (click)="OnSaveData()"> {{ SavebuttonText }} </button>
+    <button id="cancelButton" mat-dialog-close>Cancel </button>
+</mat-dialog-actions>

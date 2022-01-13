@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div style="margin: 1rem 2rem; display: flex; justify-content: space-between">
+  <div id="Allplaylists">All playlists</div>
+  <div>
+    <button type="button" class="btn btn-outline-success" (click)="createPlaylist()">Create playlist</button>
+  </div>
+</div>
+<div class="ui four column grid" style="margin-left: 1rem;">
+  <h4 *ngIf="AllPlaylists.length === 0">Empty list</h4>
+    <div class="column" *ngFor="let playlist of AllPlaylists" (click)="openPlaylist(playlist.playlistId)"> 
+      <div class="ui card" style="cursor:pointer;">
+        <div class="image">
+          <img [src]="playlist.thumbnail">
+        </div>
+        <div class="content">
+          <a class="header" style="margin: 1em 0 1em 0;">{{ playlist.title }}</a>
+          <div class="meta" style="display: flex;justify-content: space-between;">
+            <span class="date" style="font-weight: bolder;">
+              <div>{{ playlist.status }}</div>
+            </span>
+            <span class="ui right floated date" style="font-weight: bolder;">{{ playlist.publishedAt | date:'mediumDate' }}</span>
+          </div>
+          <div class="description">
+            {{ playlist.description?.slice(0,50) }}...
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>

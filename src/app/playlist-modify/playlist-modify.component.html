@@ -1,0 +1,31 @@
+<mat-dialog-content>
+    <h3> Modify playlist </h3>
+    <div class="row">
+        <div class="col">
+            <label for="playlistName" class="form-label required">Title</label>
+            <input type="text" class="form-control" id="playlistName" [(ngModel)] = "this.playlistName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="playlistDescription" class="form-label">Description</label>
+            <input type="text" class="form-control" id="playlistDescription" [(ngModel)] = "this.playlistDescription">
+        </div>
+    </div>
+    <div class="row">
+        <mat-label class="required">Visibility</mat-label>
+        <div class="col">
+            <mat-form-field appearance="standard">
+                <mat-select [(value)]="playlistVisibility">
+                    <mat-option value="PUBLIC">Public</mat-option>
+                    <mat-option value="PRIVATE">Private</mat-option>
+                    <mat-option value="UNLISTED">Unlisted</mat-option>
+                </mat-select>
+                </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button class="cancel" mat-button mat-dialog-close>Cancel</button>
+<button class="modify" mat-button (click)="updatePlaylist()">Update</button>
+</mat-dialog-actions>

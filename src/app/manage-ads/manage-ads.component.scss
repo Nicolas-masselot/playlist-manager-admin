@@ -1,0 +1,98 @@
+table {
+    width: 100%;
+    border-spacing: 0 15px !important;
+  }
+  
+td.mat-cell {
+    padding: 16px 0 16px 0;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+td.mat-cell:first-child {
+    border-left: 2px solid white;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+td.mat-cell:last-child {
+    border-right: 2px solid white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mat-row {
+    height: auto;
+ }
+
+ .mat-cell {
+    padding: 6px 6px 6px 0;
+ }
+
+.mat-paginator {
+    display: flex;
+    justify-content: center;
+    color: #5D5FEF;
+} 
+
+.searchIcon {
+    position: relative;
+    right: 24px;
+}
+
+#searchAdverts{
+    width: 316px;
+    height: 28px;
+}
+
+#searchField {
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#addAds{
+    width: 200px;
+    height: 45px;
+    color: white;
+    background: #5048E5;
+    box-shadow: 4px 8px 12px rgba(78, 99, 141, 0.06), inset 0px 4px 12px rgba(200, 211, 249, 0.6);
+    border-radius: 80px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.AdvertInfo{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.mat-column-options{
+    text-align: right;
+}
+
+#editButton {
+    margin-right: 15px;
+    background: white;
+    border-color: #5D5FEF;
+}
+
+#editButton > mat-icon {
+    color: #5D5FEF;
+}
+
+#deleteButton {
+    background: white;
+    border-color: #D80000;
+}
+
+#deleteButton > mat-icon {
+    color: #D80000;
+}
