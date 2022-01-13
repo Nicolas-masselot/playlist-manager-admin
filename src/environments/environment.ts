@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  server: 'https://be-playlist-manager-youtube.herokuapp.com/',
+  server: 'http://localhost:3000',
   YOUTUBE_URL: 'https://www.googleapis.com/youtube/v3/',
   YOUTUBE_API_TOKEN: 'AIzaSyBLptPwNpXHVUcPn7WFmeBrSHY_bUyil0E',
   ADMIN_ROLE: "eb011b5c-7142-4937-925c-9e36e21254ab",
