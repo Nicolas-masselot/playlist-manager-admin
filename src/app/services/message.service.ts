@@ -20,7 +20,8 @@ export class MessageService {
     
     return this.http.post<BackendData>(
       serveur,
-      data
+      data,
+      {withCredentials: true}
     );
   }
 }
